@@ -2,6 +2,7 @@ from datetime import datetime
 
 class InterestRateComputer:
     def get_rate():
+        print('yes')
         pass
 
 
