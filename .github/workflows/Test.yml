@@ -50,5 +50,6 @@ jobs:
       # Run the test scripts
       - name: Test with unittest
         run: |
+          cd $GITHUB_WORKSPACE
           python -m unittest test/unit_test.py
           python -m unittest test/unit_test_2.py
