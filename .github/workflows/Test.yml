@@ -51,4 +51,5 @@ jobs:
       # Run the test scripts
       - name: Test with pytest
         run: |
-          python -m pytest test/unit_test.py
+          pip install pytest pytest-cov
+          pytest test\unit_tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
