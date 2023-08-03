@@ -39,5 +39,5 @@ jobs:
       # Run the test scripts
       - name: Test with unittest
         run: |
-          python -m unittest/unit_test.py
-          python -m unittest/unit_test_2.py
+          python -m unittest unittest/unit_test.py
+          python -m unittest unittest/unit_test_2.py
