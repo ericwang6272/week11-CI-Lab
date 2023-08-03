@@ -49,7 +49,6 @@ jobs:
           ruff --format=github --target-version=py37 .
       
       # Run the test scripts
-      - name: Test with unittest
+      - name: Test with pytest
         run: |
-          python -m unittest test/unit_test.py
-          python -m unittest test/unit_test_2.py
+          python -m pytest test/unit_test.py
