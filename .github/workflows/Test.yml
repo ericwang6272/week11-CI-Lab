@@ -36,6 +36,7 @@ jobs:
       # Install the same dependencies as the project 
       - name: Install dependencies
         run: |
+          cd $GITHUB_WORKSPACE
           python -m pip install --upgrade pip
           python -m pip install ruff pytest 
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
@@ -50,6 +51,5 @@ jobs:
       # Run the test scripts
       - name: Test with unittest
         run: |
-          cd $GITHUB_WORKSPACE
           python -m unittest test/unit_test.py
           python -m unittest test/unit_test_2.py
